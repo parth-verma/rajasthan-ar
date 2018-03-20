@@ -158,6 +158,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_AudioSource_INTERNAL_CALL_ClearExtensionProperties();
 		Register_UnityEngine_AudioSource_INTERNAL_CALL_ClearExtensionProperties();
 
+		//System.Void UnityEngine.AudioSource::INTERNAL_CALL_Pause(UnityEngine.AudioSource)
+		void Register_UnityEngine_AudioSource_INTERNAL_CALL_Pause();
+		Register_UnityEngine_AudioSource_INTERNAL_CALL_Pause();
+
 		//System.Void UnityEngine.AudioSource::INTERNAL_CALL_ReadExtensionName(UnityEngine.AudioSource,System.Int32,UnityEngine.PropertyName&)
 		void Register_UnityEngine_AudioSource_INTERNAL_CALL_ReadExtensionName();
 		Register_UnityEngine_AudioSource_INTERNAL_CALL_ReadExtensionName();
@@ -165,6 +169,14 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.AudioSource::INTERNAL_CALL_ReadExtensionPropertyName(UnityEngine.AudioSource,System.Int32,UnityEngine.PropertyName&)
 		void Register_UnityEngine_AudioSource_INTERNAL_CALL_ReadExtensionPropertyName();
 		Register_UnityEngine_AudioSource_INTERNAL_CALL_ReadExtensionPropertyName();
+
+		//System.Void UnityEngine.AudioSource::Play(System.UInt64)
+		void Register_UnityEngine_AudioSource_Play();
+		Register_UnityEngine_AudioSource_Play();
+
+		//System.Void UnityEngine.AudioSource::set_playOnAwake(System.Boolean)
+		void Register_UnityEngine_AudioSource_set_playOnAwake();
+		Register_UnityEngine_AudioSource_set_playOnAwake();
 
 		//UnityEngine.AudioClip UnityEngine.AudioSource::get_clip()
 		void Register_UnityEngine_AudioSource_get_clip();
@@ -2211,6 +2223,58 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_UnityLogWriter_WriteStringToUnityLog();
 
 	//End Registrations for type : UnityEngine.UnityLogWriter
+
+	//Start Registrations for type : UnityEngine.Video.VideoPlayer
+
+		//System.Boolean UnityEngine.Video.VideoPlayer::get_isPlaying()
+		void Register_UnityEngine_Video_VideoPlayer_get_isPlaying();
+		Register_UnityEngine_Video_VideoPlayer_get_isPlaying();
+
+		//System.Boolean UnityEngine.Video.VideoPlayer::get_isPrepared()
+		void Register_UnityEngine_Video_VideoPlayer_get_isPrepared();
+		Register_UnityEngine_Video_VideoPlayer_get_isPrepared();
+
+		//System.Double UnityEngine.Video.VideoPlayer::get_time()
+		void Register_UnityEngine_Video_VideoPlayer_get_time();
+		Register_UnityEngine_Video_VideoPlayer_get_time();
+
+		//System.Void UnityEngine.Video.VideoPlayer::INTERNAL_CALL_EnableAudioTrack(UnityEngine.Video.VideoPlayer,System.UInt16,System.Boolean)
+		void Register_UnityEngine_Video_VideoPlayer_INTERNAL_CALL_EnableAudioTrack();
+		Register_UnityEngine_Video_VideoPlayer_INTERNAL_CALL_EnableAudioTrack();
+
+		//System.Void UnityEngine.Video.VideoPlayer::INTERNAL_CALL_Play(UnityEngine.Video.VideoPlayer)
+		void Register_UnityEngine_Video_VideoPlayer_INTERNAL_CALL_Play();
+		Register_UnityEngine_Video_VideoPlayer_INTERNAL_CALL_Play();
+
+		//System.Void UnityEngine.Video.VideoPlayer::INTERNAL_CALL_Prepare(UnityEngine.Video.VideoPlayer)
+		void Register_UnityEngine_Video_VideoPlayer_INTERNAL_CALL_Prepare();
+		Register_UnityEngine_Video_VideoPlayer_INTERNAL_CALL_Prepare();
+
+		//System.Void UnityEngine.Video.VideoPlayer::INTERNAL_CALL_SetTargetAudioSource(UnityEngine.Video.VideoPlayer,System.UInt16,UnityEngine.AudioSource)
+		void Register_UnityEngine_Video_VideoPlayer_INTERNAL_CALL_SetTargetAudioSource();
+		Register_UnityEngine_Video_VideoPlayer_INTERNAL_CALL_SetTargetAudioSource();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_audioOutputMode(UnityEngine.Video.VideoAudioOutputMode)
+		void Register_UnityEngine_Video_VideoPlayer_set_audioOutputMode();
+		Register_UnityEngine_Video_VideoPlayer_set_audioOutputMode();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_clip(UnityEngine.Video.VideoClip)
+		void Register_UnityEngine_Video_VideoPlayer_set_clip();
+		Register_UnityEngine_Video_VideoPlayer_set_clip();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_playOnAwake(System.Boolean)
+		void Register_UnityEngine_Video_VideoPlayer_set_playOnAwake();
+		Register_UnityEngine_Video_VideoPlayer_set_playOnAwake();
+
+		//System.Void UnityEngine.Video.VideoPlayer::set_source(UnityEngine.Video.VideoSource)
+		void Register_UnityEngine_Video_VideoPlayer_set_source();
+		Register_UnityEngine_Video_VideoPlayer_set_source();
+
+		//UnityEngine.Texture UnityEngine.Video.VideoPlayer::get_texture()
+		void Register_UnityEngine_Video_VideoPlayer_get_texture();
+		Register_UnityEngine_Video_VideoPlayer_get_texture();
+
+	//End Registrations for type : UnityEngine.Video.VideoPlayer
 
 	//Start Registrations for type : UnityEngine.WebCamTexture
 

@@ -13560,6 +13560,14 @@ extern "C"  RuntimeObject * Func_3_EndInvoke_m2570897392_gshared (Func_3_t917206
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void System.Linq.Enumerable/<CreateCastIterator>c__Iterator0`1<System.Object>::.ctor()
 extern "C"  void U3CCreateCastIteratorU3Ec__Iterator0_1__ctor_m3243721128_gshared (U3CCreateCastIteratorU3Ec__Iterator0_1_t2828819126 * __this, const RuntimeMethod* method)
 {

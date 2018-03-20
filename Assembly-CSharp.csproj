@@ -57,6 +57,7 @@
      <Compile Include="Assets\menuStart.cs" />
      <Compile Include="Assets\nyiscript.cs" />
      <Compile Include="Assets\onload.cs" />
+     <Compile Include="Assets\StreamVideo.cs" />
      <Compile Include="Assets\test.cs" />
      <Compile Include="Assets\test1.cs" />
      <Compile Include="Assets\Vuforia\Scripts\DefaultInitializationErrorHandler.cs" />

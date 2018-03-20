@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/fullscreen-video.unity
+    guid: bb35025e2cfff438fb7d4dac94d6db8b
+  - enabled: 1
     path: Assets/Flags Drop Down.unity
     guid: 61ae48621a5edb646ae2c419a56e5479
   - enabled: 1
