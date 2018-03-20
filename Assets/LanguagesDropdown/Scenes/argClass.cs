@@ -7,4 +7,5 @@ public class argClass {
 
 	// Use this for initialization
 	public static String language = "en";
+	public static bool play = true;
 }

@@ -7,6 +7,7 @@ Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
 using UnityEngine;
+using UnityEngine.UI;
 using Vuforia;
 
 /// <summary>
@@ -14,7 +15,8 @@ using Vuforia;
 /// </summary>
 public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
-    #region PRIVATE_MEMBER_VARIABLES
+	public Button ask_button;
+	#region PRIVATE_MEMBER_VARIABLES
 
     protected TrackableBehaviour mTrackableBehaviour;
 
@@ -72,6 +74,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         var rendererComponents = GetComponentsInChildren<Renderer>(true);
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
+		ask_button.transform.position = ask.orgPos;
 
         // Enable rendering:
         foreach (var component in rendererComponents)
@@ -95,7 +98,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
 		AudioSource[] audioComponents = GetComponentsInChildren<AudioSource>();
 		foreach (AudioSource component in audioComponents)
 		{
-			component.GetComponent<AudioSource>().Play();
+			if (argClass.play)
+				component.GetComponent<AudioSource>().Play();
 
 		}
 
@@ -114,6 +118,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         var colliderComponents = GetComponentsInChildren<Collider>(true);
         var canvasComponents = GetComponentsInChildren<Canvas>(true);
 
+		ask_button.transform.position = new Vector3(1000,1000,1000);
         // Disable rendering:
         foreach (var component in rendererComponents)
             component.enabled = false;

@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ask.cs" />
      <Compile Include="Assets\AugmentedScript.cs" />
      <Compile Include="Assets\Common\CameraSettings.cs" />
      <Compile Include="Assets\Common\FrameRateSettings.cs" />
@@ -64,7 +65,6 @@
      <Compile Include="Assets\Common\TrackableSettings.cs" />
      <Compile Include="Assets\distance.cs" />
      <Compile Include="Assets\LanguagesDropdown\Scenes\argClass.cs" />
-     <Compile Include="Assets\LocalisationHelper.cs" />
      <Compile Include="Assets\LocalizationHelper.cs" />
      <Compile Include="Assets\menuStart.cs" />
      <Compile Include="Assets\nyiscript.cs" />

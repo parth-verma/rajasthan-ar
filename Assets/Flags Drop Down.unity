@@ -642,9 +642,7 @@ MonoBehaviour:
     m_Options:
     - m_Text: English
       m_Image: {fileID: 0}
-    - m_Text: French
-      m_Image: {fileID: 0}
-    - m_Text: Polish
+    - m_Text: Hindi
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1636,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d47142df37dfba40b94701313ab3eda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropDown: {fileID: 0}
+  dropDown: {fileID: 706306540}
   flags:
   - English
   - Hindi

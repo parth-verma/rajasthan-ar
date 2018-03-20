@@ -300,5 +300,6 @@ d3be67a39545f26b76a374a50fcbb7b6 Assembly-CSharp.dll:.AugmentedScript
 3934ca8022d4c1e2d3df62eb846732fb Assembly-CSharp.dll:.MenuAnimator
 22b1c9e3760ce0520da21ce2ca684142 Assembly-CSharp.dll:.InitErrorHandler
 437df290cc0904b22b3efca7c6e45678 Assembly-CSharp.dll:.StreamVideo
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DefaultTrackableEventHandler
+e93b23d8ac991351c689de62094aee21 Assembly-CSharp.dll:.DefaultTrackableEventHandler
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.DefaultInitializationErrorHandler
+2021c4ebd57358035d6d6ec0524fbef3 Assembly-CSharp.dll:.ask
