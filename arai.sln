@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arai", "Assembly-CSharp.csproj", "{C29CBB07-84FD-1296-3DFF-FF65314A9D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arai", "Assembly-CSharp-Editor.csproj", "{C70765FD-5588-D3D7-2AD3-0B80F643F9B9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C29CBB07-84FD-1296-3DFF-FF65314A9D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29CBB07-84FD-1296-3DFF-FF65314A9D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29CBB07-84FD-1296-3DFF-FF65314A9D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29CBB07-84FD-1296-3DFF-FF65314A9D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C70765FD-5588-D3D7-2AD3-0B80F643F9B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C70765FD-5588-D3D7-2AD3-0B80F643F9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C70765FD-5588-D3D7-2AD3-0B80F643F9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C70765FD-5588-D3D7-2AD3-0B80F643F9B9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
