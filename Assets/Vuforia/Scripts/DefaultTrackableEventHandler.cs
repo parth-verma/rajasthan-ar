@@ -1,110 +1,147 @@
 /*==============================================================================
+Copyright (c) 2017 PTC Inc. All Rights Reserved.
+
 Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
-Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
+Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
 using UnityEngine;
+using Vuforia;
 
-namespace Vuforia
+/// <summary>
+///     A custom handler that implements the ITrackableEventHandler interface.
+/// </summary>
+public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandler
 {
-	/// <summary>
-	/// A custom handler that implements the ITrackableEventHandler interface.
-	/// </summary>
-	public class DefaultTrackableEventHandler : MonoBehaviour,
-	ITrackableEventHandler
-	{
-		#region PRIVATE_MEMBER_VARIABLES
+    #region PRIVATE_MEMBER_VARIABLES
 
-		private TrackableBehaviour mTrackableBehaviour;
+    protected TrackableBehaviour mTrackableBehaviour;
 
-		#endregion // PRIVATE_MEMBER_VARIABLES
+    #endregion // PRIVATE_MEMBER_VARIABLES
 
+    #region UNTIY_MONOBEHAVIOUR_METHODS
 
+    protected virtual void Start()
+    {
+        mTrackableBehaviour = GetComponent<TrackableBehaviour>();
+        if (mTrackableBehaviour)
+            mTrackableBehaviour.RegisterTrackableEventHandler(this);
+    }
 
-		#region UNTIY_MONOBEHAVIOUR_METHODS
+    #endregion // UNTIY_MONOBEHAVIOUR_METHODS
 
-		void Start()
+    #region PUBLIC_METHODS
+
+    /// <summary>
+    ///     Implementation of the ITrackableEventHandler function called when the
+    ///     tracking state changes.
+    /// </summary>
+    public void OnTrackableStateChanged(
+        TrackableBehaviour.Status previousStatus,
+        TrackableBehaviour.Status newStatus)
+    {
+        if (newStatus == TrackableBehaviour.Status.DETECTED ||
+            newStatus == TrackableBehaviour.Status.TRACKED ||
+            newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
+        {
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+            OnTrackingFound();
+        }
+        else if (previousStatus == TrackableBehaviour.Status.TRACKED &&
+                 newStatus == TrackableBehaviour.Status.NOT_FOUND)
+        {
+            Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+            OnTrackingLost();
+        }
+        else
+        {
+            // For combo of previousStatus=UNKNOWN + newStatus=UNKNOWN|NOT_FOUND
+            // Vuforia is starting, but tracking has not been lost or found yet
+            // Call OnTrackingLost() to hide the augmentations
+            OnTrackingLost();
+        }
+    }
+
+    #endregion // PUBLIC_METHODS
+
+    #region PRIVATE_METHODS
+
+    protected virtual void OnTrackingFound()
+    {
+        var rendererComponents = GetComponentsInChildren<Renderer>(true);
+        var colliderComponents = GetComponentsInChildren<Collider>(true);
+        var canvasComponents = GetComponentsInChildren<Canvas>(true);
+
+        // Enable rendering:
+        foreach (var component in rendererComponents)
+            component.enabled = true;
+
+        // Enable colliders:
+        foreach (var component in colliderComponents)
+            component.enabled = true;
+
+        // Enable canvas':
+        foreach (var component in canvasComponents)
+            component.enabled = true;
+    
+	
+		// Enable rendering:
+		foreach (Renderer component in rendererComponents)
 		{
-			mTrackableBehaviour = GetComponent<TrackableBehaviour>();
-			if (mTrackableBehaviour)
-			{
-				mTrackableBehaviour.RegisterTrackableEventHandler(this);
-			}
+			component.enabled = true;
 		}
 
-		#endregion // UNTIY_MONOBEHAVIOUR_METHODS
-
-
-
-		#region PUBLIC_METHODS
-
-		/// <summary>
-		/// Implementation of the ITrackableEventHandler function called when the
-		/// tracking state changes.
-		/// </summary>
-		public void OnTrackableStateChanged(
-			TrackableBehaviour.Status previousStatus,
-			TrackableBehaviour.Status newStatus)
+		AudioSource[] audioComponents = GetComponentsInChildren<AudioSource>();
+		foreach (AudioSource component in audioComponents)
 		{
-			if (newStatus == TrackableBehaviour.Status.DETECTED ||
-				newStatus == TrackableBehaviour.Status.TRACKED ||
-				newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
-			{
-				OnTrackingFound();
-			}
-			else
-			{
-				OnTrackingLost();
-			}
+			component.GetComponent<AudioSource>().Play();
+
 		}
 
-		#endregion // PUBLIC_METHODS
-
-
-
-		#region PRIVATE_METHODS
-
-
-		private void OnTrackingFound()
-		{
-			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
-
-			// Enable rendering:
-			foreach (Renderer component in rendererComponents)
-			{
-				component.enabled = true;
-			}
-
-			AudioSource[] audioComponents = GetComponentsInChildren<AudioSource>();
-			foreach (AudioSource component in audioComponents)
-			{
-				component.GetComponent<AudioSource>().Play();
-
-			}
-
-			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
-		}
-
-
-		private void OnTrackingLost()
-		{
-			Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
-
-			// Disable rendering:
-			foreach (Renderer component in rendererComponents)
-			{
-				component.enabled = false;
-			}
-			AudioSource[] audioComponents = GetComponentsInChildren<AudioSource>();
-			foreach (AudioSource component in audioComponents)
-			{
-				component.GetComponent<AudioSource>().Pause();
-			}
-
-			Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
-		}
-
-		#endregion // PRIVATE_METHODS
+		Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+	
+	
+	
+	
+	
 	}
+
+
+    protected virtual void OnTrackingLost()
+    {
+        var rendererComponents = GetComponentsInChildren<Renderer>(true);
+        var colliderComponents = GetComponentsInChildren<Collider>(true);
+        var canvasComponents = GetComponentsInChildren<Canvas>(true);
+
+        // Disable rendering:
+        foreach (var component in rendererComponents)
+            component.enabled = false;
+
+        // Disable colliders:
+        foreach (var component in colliderComponents)
+            component.enabled = false;
+
+        // Disable canvas':
+        foreach (var component in canvasComponents)
+            component.enabled = false;
+    
+		// Disable rendering:
+		foreach (Renderer component in rendererComponents)
+		{
+			component.enabled = false;
+		}
+		AudioSource[] audioComponents = GetComponentsInChildren<AudioSource>();
+		foreach (AudioSource component in audioComponents)
+		{
+			component.GetComponent<AudioSource>().Pause();
+		}
+
+		Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+	
+	
+	
+	}
+
+    #endregion // PRIVATE_METHODS
 }

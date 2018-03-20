@@ -5090,6 +5090,15 @@ extern "C"  AudioClip_t3680889665 * AudioSource_get_clip_m1234340632 (AudioSourc
 	AudioClip_t3680889665 * retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
+// System.Void UnityEngine.AudioSource::set_clip(UnityEngine.AudioClip)
+extern "C"  void AudioSource_set_clip_m31653938 (AudioSource_t3935305588 * __this, AudioClip_t3680889665 * ___value0, const RuntimeMethod* method)
+{
+	typedef void (*AudioSource_set_clip_m31653938_ftn) (AudioSource_t3935305588 *, AudioClip_t3680889665 *);
+	static AudioSource_set_clip_m31653938_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AudioSource_set_clip_m31653938_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioSource::set_clip(UnityEngine.AudioClip)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // System.Void UnityEngine.AudioSource::Play(System.UInt64)
 extern "C"  void AudioSource_Play_m3389845180 (AudioSource_t3935305588 * __this, uint64_t ___delay0, const RuntimeMethod* method)
 {
@@ -5109,6 +5118,15 @@ extern "C"  void AudioSource_Play_m48294159 (AudioSource_t3935305588 * __this, c
 		AudioSource_Play_m3389845180(__this, L_0, /*hidden argument*/NULL);
 		return;
 	}
+}
+// System.Void UnityEngine.AudioSource::Stop()
+extern "C"  void AudioSource_Stop_m2682712816 (AudioSource_t3935305588 * __this, const RuntimeMethod* method)
+{
+	typedef void (*AudioSource_Stop_m2682712816_ftn) (AudioSource_t3935305588 *);
+	static AudioSource_Stop_m2682712816_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (AudioSource_Stop_m2682712816_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioSource::Stop()");
+	_il2cpp_icall_func(__this);
 }
 // System.Void UnityEngine.AudioSource::Pause()
 extern "C"  void AudioSource_Pause_m1501822765 (AudioSource_t3935305588 * __this, const RuntimeMethod* method)

@@ -217,11 +217,12 @@ extern const uint32_t Vector2_get_one_m738793577_MetadataUsageId;
 extern const uint32_t Vector2_get_up_m2647420593_MetadataUsageId;
 extern const uint32_t Vector2_get_right_m1027081661_MetadataUsageId;
 extern const uint32_t Vector2__cctor_m2108982652_MetadataUsageId;
+extern RuntimeClass* Vector3_t3722313464_il2cpp_TypeInfo_var;
+extern const uint32_t Vector3_Slerp_m802114822_MetadataUsageId;
 extern const uint32_t Vector3_Lerp_m407887542_MetadataUsageId;
 extern String_t* _stringLiteral3966192333;
 extern const uint32_t Vector3_get_Item_m668685504_MetadataUsageId;
 extern const uint32_t Vector3_set_Item_m1772472431_MetadataUsageId;
-extern RuntimeClass* Vector3_t3722313464_il2cpp_TypeInfo_var;
 extern const uint32_t Vector3_Equals_m1753054704_MetadataUsageId;
 extern const uint32_t Vector3_Normalize_m2941713846_MetadataUsageId;
 extern const uint32_t Vector3_get_normalized_m2454957984_MetadataUsageId;
@@ -4282,6 +4283,8 @@ extern "C"  bool Vector2_op_Equality_m2303255133 (RuntimeObject * __this /* stat
 extern "C"  void Vector3__ctor_m3353183577 (Vector3_t3722313464 * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Vector3::.ctor(System.Single,System.Single)
 extern "C"  void Vector3__ctor_m1719387948 (Vector3_t3722313464 * __this, float ___x0, float ___y1, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Vector3::INTERNAL_CALL_Slerp(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,UnityEngine.Vector3&)
+extern "C"  void Vector3_INTERNAL_CALL_Slerp_m2209850731 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464 * ___a0, Vector3_t3722313464 * ___b1, float ___t2, Vector3_t3722313464 * ___value3, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Clamp01(System.Single)
 extern "C"  float Mathf_Clamp01_m56433566 (RuntimeObject * __this /* static, unused */, float ___value0, const RuntimeMethod* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Vector3::get_Item(System.Int32)
@@ -5876,6 +5879,43 @@ extern "C"  void Vector3__ctor_m1719387948_AdjustorThunk (RuntimeObject * __this
 {
 	Vector3_t3722313464 * _thisAdjusted = reinterpret_cast<Vector3_t3722313464 *>(__this + 1);
 	Vector3__ctor_m1719387948(_thisAdjusted, ___x0, ___y1, method);
+}
+// UnityEngine.Vector3 UnityEngine.Vector3::Slerp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
+extern "C"  Vector3_t3722313464  Vector3_Slerp_m802114822 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___a0, Vector3_t3722313464  ___b1, float ___t2, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Vector3_Slerp_m802114822_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t3722313464  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Vector3_t3722313464  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	{
+		float L_0 = ___t2;
+		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
+		Vector3_INTERNAL_CALL_Slerp_m2209850731(NULL /*static, unused*/, (&___a0), (&___b1), L_0, (&V_0), /*hidden argument*/NULL);
+		Vector3_t3722313464  L_1 = V_0;
+		V_1 = L_1;
+		goto IL_0014;
+	}
+
+IL_0014:
+	{
+		Vector3_t3722313464  L_2 = V_1;
+		return L_2;
+	}
+}
+// System.Void UnityEngine.Vector3::INTERNAL_CALL_Slerp(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,UnityEngine.Vector3&)
+extern "C"  void Vector3_INTERNAL_CALL_Slerp_m2209850731 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464 * ___a0, Vector3_t3722313464 * ___b1, float ___t2, Vector3_t3722313464 * ___value3, const RuntimeMethod* method)
+{
+	typedef void (*Vector3_INTERNAL_CALL_Slerp_m2209850731_ftn) (Vector3_t3722313464 *, Vector3_t3722313464 *, float, Vector3_t3722313464 *);
+	static Vector3_INTERNAL_CALL_Slerp_m2209850731_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Vector3_INTERNAL_CALL_Slerp_m2209850731_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Vector3::INTERNAL_CALL_Slerp(UnityEngine.Vector3&,UnityEngine.Vector3&,System.Single,UnityEngine.Vector3&)");
+	_il2cpp_icall_func(___a0, ___b1, ___t2, ___value3);
 }
 // UnityEngine.Vector3 UnityEngine.Vector3::Lerp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
 extern "C"  Vector3_t3722313464  Vector3_Lerp_m407887542 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___a0, Vector3_t3722313464  ___b1, float ___t2, const RuntimeMethod* method)

@@ -52,8 +52,20 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AugmentedScript.cs" />
+     <Compile Include="Assets\Common\CameraSettings.cs" />
+     <Compile Include="Assets\Common\FrameRateSettings.cs" />
+     <Compile Include="Assets\Common\InitErrorHandler.cs" />
+     <Compile Include="Assets\Common\MenuAnimator.cs" />
+     <Compile Include="Assets\Common\MenuOptions.cs" />
+     <Compile Include="Assets\Common\SplashAbout\AboutScreen.cs" />
+     <Compile Include="Assets\Common\SplashAbout\AsyncSceneLoader.cs" />
+     <Compile Include="Assets\Common\SplashAbout\LoadingScreen.cs" />
+     <Compile Include="Assets\Common\TapHandler.cs" />
+     <Compile Include="Assets\Common\TrackableSettings.cs" />
+     <Compile Include="Assets\distance.cs" />
      <Compile Include="Assets\LanguagesDropdown\Scenes\argClass.cs" />
-     <Compile Include="Assets\LanguagesDropdown\Scripts\LocalizationHelper.cs" />
+     <Compile Include="Assets\LocalisationHelper.cs" />
+     <Compile Include="Assets\LocalizationHelper.cs" />
      <Compile Include="Assets\menuStart.cs" />
      <Compile Include="Assets\nyiscript.cs" />
      <Compile Include="Assets\onload.cs" />
@@ -65,9 +77,12 @@
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />
      <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
+     <None Include="Assets\link.xml" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
      <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
+     <None Include="Assets\readme_SDK.txt" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
+     <None Include="Assets\license_3rdpartynotice.txt" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
      <None Include="Assets\StreamingAssets\Vuforia\arrr.xml" />
